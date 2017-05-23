@@ -12,7 +12,7 @@
         <!--First-->
         <scene sceneID="q5z-2T-Gb5">
             <objects>
-                <viewController id="WsS-Se-pDM" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FirstID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WsS-Se-pDM" customClass="FirstViewController" customModule="SeparateStoryboard" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vSv-Pp-nqJ"/>
                         <viewControllerLayoutGuide type="bottom" id="jE6-Yn-noC"/>
@@ -20,7 +20,20 @@
                     <view key="view" contentMode="scaleToFill" id="nkN-X6-zPK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Und-95-nlg">
+                                <rect key="frame" x="134" y="318" width="106" height="30"/>
+                                <state key="normal" title="Call Other View"/>
+                                <connections>
+                                    <action selector="callOtherView:" destination="WsS-Se-pDM" eventType="touchUpInside" id="jdd-jc-NfK"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Und-95-nlg" firstAttribute="centerY" secondItem="nkN-X6-zPK" secondAttribute="centerY" id="5E5-6u-jvN"/>
+                            <constraint firstItem="Und-95-nlg" firstAttribute="centerX" secondItem="nkN-X6-zPK" secondAttribute="centerX" id="5PZ-X5-6a9"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="First" id="E49-c3-OSR"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
